@@ -1,0 +1,62 @@
+program main
+/* hoho hoho hoho
+THIS IS A Multiline COMMENT
+*/
+{
+declare a;
+function lex()
+{
+declare i, j, filestatus,
+found, state,
+inp;
+//This is an error
+k := a12345678912345678901234567890123;
+i := 0;
+state := STATE0;
+while(state = STATE0 or state = STATE1 or state = STATE2)
+ {
+filestatus := fscanf(in fp, inout c);
+inp := COTHER;
+if(filestatus = EOF)
+inp := CEOF
+else
+{
+j := 0;
+found := 0;
+doublewhile([j < 16] and [not [[[[[[found = 1]]]]]]])
+{
+if(c = symbol(in j))
+{
+inp := defsym(inout j);
+found := 1;
+}
+}
+else
+return (found);
+;
+if(not[found=1])
+{
+if([c = 1 or c = 2 or c = 3 or c=4])
+{
+inp := CBLANK;
+}
+else if([c >= 48 and c <= 57])
+inp := CDIGIT
+else if([[c >= 65 and c <= 90] or [c >= 97 and c
+<= 122]])
+{
+inp := CLETTER;
+}
+}
+}
+}
+return found;
+}
+a:=lex()
+;
+ print
+(
+a
+)
+;
+}
